@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Ruby Programming Language</title>
-    <script type="text/javascript">
-      var languages = {
-        "de":    "de",
-        "es":    "es",
-        "id":    "id",
-        "ja":    "ja",
-        "ko":    "ko",
-        "pt":    "pt",
-        "ru":    "ru",
-        "tr":    "tr",
-        "uk":    "uk",
-        "ua":    "uk",
-        "zh-CN": "zh_cn",
-        "zh-TW": "zh_tw"
-      };
 
-      var code = window.navigator.language || window.navigator.userLanguage || "en";
-      if (code.substr(0,2) !== "zh") { code = code.substr(0,2); }
+<head>
+  <meta charset="utf-8">
+  <title>Ruby Programming Language</title>
+  <script type="text/javascript">
+    var languages = {
+      "de": "de",
+      "es": "es",
+      "id": "id",
+      "ja": "ja",
+      "ko": "ko",
+      "pt": "pt",
+      "ru": "ru",
+      "tr": "tr",
+      "uk": "uk",
+      "zh-CN": "zh_cn",
+      "zh-TW": "zh_tw"
+    };
 
-      var language = languages[code];
-      if (!language) { language = "en"; }
+    var code = window.navigator.language || window.navigator.userLanguage || "en";
+    if (code.substr(0, 2) !== "zh") { code = code.substr(0, 2); }
 
-      // If we're running on localhost/loopback for local development,
-      // keep redirects relative so the developer can test locally.
-      var host = window.location.hostname;
-      var isLocal = (host === 'localhost' || host === '127.0.0.1' || host === '::1');
-      if (isLocal) {
-        document.location = "/" + language + "/";
-      } else {
-        document.location = "https://www.ruby-lang.org/" + language + "/";
-      }
-    </script>
-    <noscript>
-      <meta http-equiv="refresh" content="0; url=https://www.ruby-lang.org/en/">
-    </noscript>
-  </head>
-  <body>
-    <p><a href="https://www.ruby-lang.org/en/">Click here</a> to be redirected.</p>
-  </body>
+    var language = languages[code];
+    if (!language) { language = "en"; }
+
+    // If we're running on localhost/loopback for local development,
+    // keep redirects relative so the developer can test locally.
+    var host = window.location.hostname;
+    var isLocal = (host === 'localhost' || host === '127.0.0.1' || host === '::1');
+    if (isLocal) {
+      document.location = "/" + language + "/";
+    } else {
+      document.location = "https://www.ruby-lang.org/" + language + "/";
+    }
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://www.ruby-lang.org/en/">
+  </noscript>
+</head>
+
+<body>
+  <p><a href="https://www.ruby-lang.org/en/">Click here</a> to be redirected.</p>
+</body>
+
 </html>
